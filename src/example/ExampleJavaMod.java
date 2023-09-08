@@ -3,6 +3,8 @@ package example;
 import arc.*;
 import arc.util.*;
 import example.content.TechTree;
+import example.content.block.CollapseMachine;
+import example.content.block.SubstanceConveyor;
 import example.content.item.BlackHole;
 import example.content.item.Singularity;
 import example.content.item.item;
@@ -36,6 +38,8 @@ public class ExampleJavaMod extends Mod{
         Log.info("Loading some example content.");
         Singularity.load();
         BlackHole.load();
+        CollapseMachine.load();
+        SubstanceConveyor.load();
         TechTree.load();
     }
 
