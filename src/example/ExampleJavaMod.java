@@ -3,6 +3,7 @@ package example;
 import arc.*;
 import arc.util.*;
 import example.content.TechTree;
+import example.content.item.BlackHole;
 import example.content.item.Singularity;
 import example.content.item.item;
 import mindustry.*;
@@ -33,7 +34,8 @@ public class ExampleJavaMod extends Mod{
     @Override
     public void loadContent(){
         Log.info("Loading some example content.");
-        item.load();
+        Singularity.load();
+        BlackHole.load();
         TechTree.load();
     }
 
