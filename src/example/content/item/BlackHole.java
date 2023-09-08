@@ -7,6 +7,7 @@ public class BlackHole {
     public static void load(){
         BlackHole = new Item("BlackHole"){{
             hardness = -1;
+            alwaysUnlocked = true;
         }};
     }
 }

@@ -8,6 +8,7 @@ public class Singularity {
         Singularity = new Item("奇点"){
             {
                 hardness = -1;
+                alwaysUnlocked = true;
             }
         };
     }
