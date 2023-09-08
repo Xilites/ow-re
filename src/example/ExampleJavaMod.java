@@ -2,6 +2,9 @@ package example;
 
 import arc.*;
 import arc.util.*;
+import example.content.TechTree;
+import example.content.item.Singularity;
+import example.content.item.item;
 import mindustry.*;
 import mindustry.content.*;
 import mindustry.game.EventType.*;
@@ -21,7 +24,6 @@ public class ExampleJavaMod extends Mod{
                 BaseDialog dialog = new BaseDialog("frog");
                 dialog.cont.add("behold").row();
                 //mod sprites are prefixed with the mod name (this mod is called 'example-java-mod' in its config)
-                dialog.cont.image(Core.atlas.find("example-java-mod-frog")).pad(20f).row();
                 dialog.cont.button("I see", dialog::hide).size(100f, 50f);
                 dialog.show();
             });
@@ -31,6 +33,8 @@ public class ExampleJavaMod extends Mod{
     @Override
     public void loadContent(){
         Log.info("Loading some example content.");
+        item.load();
+        TechTree.load();
     }
 
 }
