@@ -17,7 +17,9 @@ public class TechTree {
         Planets.erekir.techTree = nodeRoot("Old World(旧世界)", Singularity.Singularity,() -> {
             node(block.CollapseMachine, () -> {
                 node(BlackHole.BlackHole);
-                node(block.SubstanceConveyor);
+                node(block.SubstanceConveyor,() -> {
+                    node(block.CoreUnloader);
+                });
             });
         });
     }

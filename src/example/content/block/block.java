@@ -7,12 +7,14 @@ import mindustry.type.ItemStack;
 import mindustry.world.Block;
 import mindustry.world.blocks.campaign.LaunchPad;
 import mindustry.world.blocks.production.GenericCrafter;
+import mindustry.world.blocks.storage.Unloader;
+import mindustry.world.meta.BlockGroup;
 
 import static mindustry.content.Fx.none;
 import static mindustry.type.ItemStack.with;
 
 public class block {
-    public static Block CollapseMachine, SubstanceConveyor;
+    public static Block CollapseMachine, SubstanceConveyor, CoreUnloader;
     public static void load(){
         CollapseMachine = new GenericCrafter("CollapseMachine"){{
             requirements(Category.crafting, with(Items.carbide,2));
@@ -40,5 +42,12 @@ public class block {
 
             consumePower(5f);
         }};
+        CoreUnloader = new Unloader("CoreUnloader"){
+            {
+                requirements(Category.effect, with(Items.titanium, 25, Items.silicon, 30));
+                speed = 60f / 11f;
+                group = BlockGroup.transportation;
+            }
+        };
     }
 }
