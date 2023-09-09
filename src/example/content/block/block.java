@@ -13,7 +13,7 @@ import static mindustry.content.Fx.none;
 import static mindustry.type.ItemStack.with;
 
 public class block {
-    public static Block CollapseMachine, SubstanceConveyor, Update;
+    public static Block CollapseMachine, SubstanceConveyor;
     public static void load(){
         CollapseMachine = new GenericCrafter("collapse-machine"){{
             requirements(Category.crafting, with(Items.carbide,2));

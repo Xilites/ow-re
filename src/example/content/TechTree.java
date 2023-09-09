@@ -14,7 +14,7 @@ public class TechTree {
             node(block.CollapseMachine, () -> {
                 node(item.BlackHole);
                 node(block.SubstanceConveyor,() -> {
-                    node(item.UpdateUnloader);
+                    node(planet.OldWorldCenter);
                 });
             });
         });
