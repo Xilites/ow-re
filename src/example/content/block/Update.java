@@ -12,6 +12,5 @@ public class Update extends Block {
     public Update(String name) {
         super(name);
         loadIcon();
-        Core.atlas.find("Update");
     }
 }

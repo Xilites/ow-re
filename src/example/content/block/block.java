@@ -1,5 +1,6 @@
 package example.content.block;
 
+import arc.Core;
 import example.content.item.BlackHole;
 import example.content.item.item;
 import mindustry.content.Blocks;
@@ -49,6 +50,7 @@ public class block {
         Update = new Update("CoreUnloaderUpdate"){{
             requirements(Category.effect,with(item.BlackHole, 5));
             Blocks.ductUnloader.underBullets = false;
+            Core.atlas.find("Update");
         }};
     }
 }
