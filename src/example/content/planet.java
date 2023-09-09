@@ -1,15 +1,19 @@
 package example.content;
 
+import arc.Core;
 import arc.graphics.Color;
+import arc.graphics.g2d.TextureRegion;
 import mindustry.content.Planets;
 import mindustry.graphics.g3d.SunMesh;
 import mindustry.type.Planet;
 
 public class planet {
     public static Planet
-            OldWorldCenter;
+    OldWorldCenter,
+    OldWorld,
+    NewWorld;
     public static void load(){
-        OldWorldCenter = new Planet("OldWorldCenter", null, 4f){{
+        OldWorldCenter = new Planet("old-world-center", null, 4f){{
             bloom = true;
             accessible = false;
 
@@ -25,5 +29,9 @@ public class planet {
                     Color.valueOf("FF9664")
             );
         }};
+        OldWorld = new Planet("old-world",OldWorldCenter,2f){{
+
+        }};
+        TextureRegion texture = Core.atlas.find("Planet");
     }
 }

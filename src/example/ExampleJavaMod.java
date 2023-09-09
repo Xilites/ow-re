@@ -21,7 +21,7 @@ public class ExampleJavaMod extends Mod{
             //show dialog upon startup
             Time.runTask(10f, () -> {
                 BaseDialog dialog = new BaseDialog("frog");
-                dialog.cont.add("behold").row();
+                dialog.cont.add("load").row();
                 //mod sprites are prefixed with the mod name (this mod is called 'example-java-mod' in its config)
                 dialog.cont.button("I see", dialog::hide).size(100f, 50f);
                 dialog.show();
