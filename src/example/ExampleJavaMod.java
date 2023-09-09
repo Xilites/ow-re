@@ -37,10 +37,7 @@ public class ExampleJavaMod extends Mod{
     public void loadContent(){
         Log.info("Loading some example content.");
         Singularity.load();
-        BlackHole.load();
-        CollapseMachine.load();
-        SubstanceConveyor.load();
-        TechTree.load();
+
     }
 
 }
