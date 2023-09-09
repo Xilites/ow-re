@@ -1,6 +1,8 @@
 package example.content.block;
 
 import arc.Core;
+import arc.graphics.Texture;
+import arc.graphics.g2d.TextureRegion;
 import example.content.item.item;
 import mindustry.content.Items;
 import mindustry.type.Category;

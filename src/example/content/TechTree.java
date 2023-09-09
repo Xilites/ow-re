@@ -14,11 +14,11 @@ public class TechTree {
             node(block.CollapseMachine, () -> {
                 node(item.BlackHole);
                 node(block.SubstanceConveyor,() -> {
-                    node(planet.OldWorldCenter, () -> {
-                        node(planet.OldWorld);
-                        node(planet.NewWorld);
-                    });
                 });
+            });
+            node(planet.OldWorldCenter, () -> {
+                node(planet.OldWorld);
+                node(planet.NewWorld);
             });
         });
     }

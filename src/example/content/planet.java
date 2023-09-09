@@ -28,10 +28,12 @@ public class planet {
                     Color.valueOf("6496FF"),
                     Color.valueOf("FF9664")
             );
+            alwaysUnlocked = true;
         }};
         OldWorld = new Planet("old-world",OldWorldCenter,2f){{
 
         }};
         TextureRegion texture = Core.atlas.find("Planet");
+        new TextureRegion(texture);
     }
 }
