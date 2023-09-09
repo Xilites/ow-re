@@ -5,6 +5,7 @@ import arc.util.*;
 import example.content.TechTree;
 import example.content.block.CollapseMachine;
 import example.content.block.SubstanceConveyor;
+import example.content.block.Update;
 import example.content.block.block;
 import example.content.item.BlackHole;
 import example.content.item.Singularity;
@@ -37,8 +38,7 @@ public class ExampleJavaMod extends Mod{
     @Override
     public void loadContent(){
         Log.info("Loading some example content.");
-        Singularity.load();
-        BlackHole.load();
+        item.load();
         block.load();
         TechTree.load();
     }

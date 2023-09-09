@@ -14,11 +14,11 @@ import static mindustry.content.TechTree.nodeRoot;
 
 public class TechTree {
     public static void load(){
-        Planets.erekir.techTree = nodeRoot("Old World(旧世界)", Singularity.Singularity,() -> {
+        Planets.erekir.techTree = nodeRoot("Old World(旧世界)", item.Singularity,() -> {
             node(block.CollapseMachine, () -> {
-                node(BlackHole.BlackHole);
+                node(item.BlackHole);
                 node(block.SubstanceConveyor,() -> {
-                    node(block.CoreUnloader);
+                    node(block.Update);
                 });
             });
         });
