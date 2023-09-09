@@ -2,6 +2,7 @@ package example.content;
 
 import arc.Core;
 import arc.graphics.Color;
+import arc.graphics.g2d.SpriteBatch;
 import arc.graphics.g2d.TextureRegion;
 import mindustry.content.Planets;
 import mindustry.graphics.g3d.SunMesh;
@@ -16,7 +17,7 @@ public class planet {
         OldWorldCenter = new Planet("old-world-center", null, 4f){{
             bloom = true;
             accessible = true;
-
+            Core.atlas.drawable("Planet");
             meshLoader = () -> new SunMesh(
                     this, 4,
                     5, 0.3, 1.7, 1.2, 1,
@@ -31,10 +32,10 @@ public class planet {
             alwaysUnlocked = true;
         }};
         OldWorld = new Planet("old-world",OldWorldCenter,2f){{
-            Core.atlas.find("Planet",new TextureRegion());
+            Core.atlas.drawable("Planet");
         }};
         NewWorld = new Planet("new-world",OldWorldCenter,2f){{
-            Core.atlas.find("Planet",new TextureRegion());
+            Core.atlas.drawable("Planet");
         }};
     }
 }
