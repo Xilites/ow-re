@@ -13,7 +13,7 @@ import static mindustry.type.ItemStack.with;
 public class SubstanceConveyor {
     public static Block SubstanceConveyor;
     public static void load(){
-        SubstanceConveyor = new LaunchPad("物质传送台"){{
+        SubstanceConveyor = new LaunchPad("SubstanceConveyor"){{
             requirements(Category.effect,with(BlackHole.BlackHole,5));
             breakEffect = none;
             destroyEffect = none;
@@ -21,7 +21,7 @@ public class SubstanceConveyor {
             hasItems = true;
             launchTime = 0;
             itemCapacity = 50;
-            size = 2;
+            size = 3;
 
             consumePower(5f);
         }};

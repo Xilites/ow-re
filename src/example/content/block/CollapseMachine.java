@@ -14,7 +14,7 @@ import static mindustry.type.ItemStack.with;
 public class CollapseMachine {
     public static Block CollapseMachine;
     public static void load(){
-        CollapseMachine = new GenericCrafter("压缩机"){{
+        CollapseMachine = new GenericCrafter("CollapseMachine"){{
             requirements(Category.crafting, with(Items.carbide,2));
 
             craftEffect = none;
@@ -23,7 +23,7 @@ public class CollapseMachine {
             hasPower = true;
             craftTime = 60f * 2;
             itemCapacity = 50;
-            size = 2;
+            size = 3;
 
             consumeItem(Items.carbide,2);
             consumePower(10f);
