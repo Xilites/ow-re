@@ -10,16 +10,20 @@ import static mindustry.content.TechTree.nodeRoot;
 
 public class TechTree {
     public static void load(){
-        Planets.erekir.techTree = nodeRoot("Old World(旧世界)", item.Singularity,() -> {
-            node(block.CollapseMachine, () -> {
-                node(item.BlackHole);
-                node(block.SubstanceConveyor,() -> {
-                });
-            });
+         mindustry.content.TechTree.TechNode TechTree = nodeRoot("Old World(旧世界)", item.Singularity,() -> {
+
             node(planet.OldWorldCenter, () -> {
-                node(planet.OldWorld);
+                node(planet.OldWorld, () -> {
+                    node(block.CollapseMachine, () -> {
+                        node(item.BlackHole);
+                        node(block.SubstanceConveyor,() -> {
+                        });
+                    });
+                });
                 node(planet.NewWorld);
             });
         });
+        planet.OldWorldCenter.techTree = TechTree;
+        Planets.erekir.techTree = TechTree;
     }
 }

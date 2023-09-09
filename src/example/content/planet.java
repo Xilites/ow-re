@@ -33,6 +33,9 @@ public class planet {
         OldWorld = new Planet("old-world",OldWorldCenter,2f){{
 
         }};
+        NewWorld = new Planet("new-world",OldWorldCenter,2f){{
+
+        }};
         TextureRegion texture = Core.atlas.find("Planet");
         new TextureRegion(texture);
     }
