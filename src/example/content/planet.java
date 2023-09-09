@@ -13,9 +13,10 @@ public class planet {
     OldWorld,
     NewWorld;
     public static void load(){
+        TextureRegion texture = Core.atlas.find("Planet");
         OldWorldCenter = new Planet("old-world-center", null, 4f){{
             bloom = true;
-            accessible = false;
+            accessible = true;
 
             meshLoader = () -> new SunMesh(
                     this, 4,
@@ -31,12 +32,10 @@ public class planet {
             alwaysUnlocked = true;
         }};
         OldWorld = new Planet("old-world",OldWorldCenter,2f){{
-
+            new TextureRegion(texture);
         }};
         NewWorld = new Planet("new-world",OldWorldCenter,2f){{
-
+            new TextureRegion(texture);
         }};
-        TextureRegion texture = Core.atlas.find("Planet");
-        new TextureRegion(texture);
     }
 }
