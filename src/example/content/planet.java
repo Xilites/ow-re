@@ -5,7 +5,8 @@ import arc.graphics.Color;
 import arc.graphics.g2d.SpriteBatch;
 import arc.graphics.g2d.TextureRegion;
 import mindustry.content.Planets;
-import mindustry.graphics.g3d.SunMesh;
+import mindustry.graphics.g3d.*;
+import mindustry.maps.planet.ErekirPlanetGenerator;
 import mindustry.type.Planet;
 
 public class planet {
@@ -17,7 +18,6 @@ public class planet {
         OldWorldCenter = new Planet("old-world-center", null, 4f){{
             bloom = true;
             accessible = true;
-            Core.atlas.drawable("Planet");
             meshLoader = () -> new SunMesh(
                     this, 4,
                     5, 0.3, 1.7, 1.2, 1,
@@ -32,10 +32,16 @@ public class planet {
             alwaysUnlocked = true;
         }};
         OldWorld = new Planet("old-world",OldWorldCenter,2f){{
-            Core.atlas.drawable("Planet");
+            generator = new ErekirPlanetGenerator();
+            meshLoader = () -> new HexMesh(this, 5);
+            cloudMeshLoader = () -> new MultiMesh(
+                    new HexSkyMesh(this, 2, 0.15f, 0.14f, 5, Color.valueOf("eba768").a(0.75f), 2, 0.42f, 1f, 0.43f),
+                    new HexSkyMesh(this, 3, 0.6f, 0.15f, 5, Color.valueOf("eea293").a(0.75f), 2, 0.42f, 1.2f, 0.45f)
+            );
+            landCloudColor = Color.valueOf("9696FF");
+            atmosphereColor = Color.valueOf("6496FF");
         }};
         NewWorld = new Planet("new-world",OldWorldCenter,2f){{
-            Core.atlas.drawable("Planet");
         }};
     }
 }
