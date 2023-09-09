@@ -3,7 +3,11 @@ package example.content.item;
 import arc.Core;
 import mindustry.content.Blocks;
 import mindustry.content.Items;
+import mindustry.type.Category;
 import mindustry.type.Item;
+import mindustry.world.blocks.storage.Unloader;
+
+import static mindustry.type.ItemStack.with;
 
 public class item {
     public static Item Singularity, BlackHole, UpdateUnloader;
@@ -18,7 +22,16 @@ public class item {
         }};
         UpdateUnloader = new Item("update"){
             {
-                Blocks.ductUnloader.underBullets = false;
+                Blocks.ductUnloader = new Unloader("duct-unloader"){
+                    {
+                        requirements(Category.distribution, with(Items.graphite, 20, Items.silicon, 20, Items.tungsten, 10));
+                        health = 120;
+                        speed = 4f;
+                        solid = false;
+                        underBullets = true;
+                        regionRotated1 = 1;
+                    }
+                };
             }
         };
     }

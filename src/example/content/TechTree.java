@@ -1,14 +1,9 @@
 package example.content;
 
-import example.content.block.CollapseMachine;
-import example.content.block.SubstanceConveyor;
 import example.content.block.block;
-import example.content.item.BlackHole;
-import example.content.item.Singularity;
 import example.content.item.item;
 import mindustry.content.Blocks;
 import mindustry.content.Planets;
-import mindustry.content.TechTree.*;
 
 import static mindustry.content.TechTree.node;
 import static mindustry.content.TechTree.nodeRoot;
@@ -23,8 +18,5 @@ public class TechTree {
                 });
             });
         });
-        if (item.UpdateUnloader.unlocked()){
-            Blocks.ductUnloader.underBullets = false;
-        }
     }
 }

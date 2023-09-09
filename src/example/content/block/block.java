@@ -1,7 +1,6 @@
 package example.content.block;
 
-import example.content.item.BlackHole;
-import mindustry.content.Blocks;
+import example.content.item.item;
 import mindustry.content.Items;
 import mindustry.type.Category;
 import mindustry.type.ItemStack;
@@ -19,7 +18,7 @@ public class block {
             requirements(Category.crafting, with(Items.carbide,2));
 
             craftEffect = none;
-            outputItem = new ItemStack(BlackHole.BlackHole,2);
+            outputItem = new ItemStack(item.BlackHole,2);
             hasItems = true;
             hasPower = true;
             craftTime = 60f * 2;
@@ -30,7 +29,7 @@ public class block {
             consumePower(10f);
         }};
         SubstanceConveyor = new LaunchPad("substance-conveyor"){{
-            requirements(Category.effect,with(BlackHole.BlackHole,5));
+            requirements(Category.effect,with(item.BlackHole,5));
             breakEffect = none;
             destroyEffect = none;
             hasPower = true;
