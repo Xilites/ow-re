@@ -1,5 +1,6 @@
 package example.content.block;
 
+import arc.Core;
 import example.content.item.item;
 import mindustry.content.Items;
 import mindustry.type.Category;
@@ -27,6 +28,8 @@ public class block {
 
             consumeItem(Items.carbide,2);
             consumePower(10f);
+
+            Core.atlas.find(this.name);
         }};
         SubstanceConveyor = new LaunchPad("substance-conveyor"){{
             requirements(Category.effect,with(item.BlackHole,5));
@@ -39,6 +42,8 @@ public class block {
             size = 2;
 
             consumePower(5f);
+
+            Core.atlas.find(this.name);
         }};
     }
 }
