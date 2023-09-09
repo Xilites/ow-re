@@ -5,6 +5,7 @@ import arc.util.*;
 import example.content.TechTree;
 import example.content.block.block;
 import example.content.item.item;
+import example.content.planet;
 import mindustry.game.EventType.*;
 import mindustry.gen.*;
 import mindustry.mod.*;
@@ -31,6 +32,7 @@ public class ExampleJavaMod extends Mod{
     @Override
     public void loadContent(){
         Log.info("Loading some example content.");
+        planet.load();
         item.load();
         block.load();
         TechTree.load();
