@@ -23,7 +23,7 @@ public class TechTree {
                 node(planet.NewWorld);
             });
         });
-//        planet.OldWorldCenter.techTree = TechTree;
-        Planets.erekir.techTree = TechTree;
+        planet.OldWorldCenter.techTree = TechTree;
+//        Planets.erekir.techTree = TechTree;
     }
 }
