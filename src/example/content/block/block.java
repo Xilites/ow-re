@@ -26,7 +26,7 @@ public class block {
             hasPower = true;
             craftTime = 60f * 2;
             itemCapacity = 50;
-            size = 2;
+            size = 4;
             solid = true;
 
             consumeItem(Items.carbide,2);
@@ -42,7 +42,7 @@ public class block {
             hasItems = true;
             launchTime = 0;
             itemCapacity = 50;
-            size = 2;
+            size = 4;
             solid = true;
 
             consumePower(5f);
