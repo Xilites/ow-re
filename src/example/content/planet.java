@@ -20,24 +20,22 @@ public class planet {
     OldWorld,
     NewWorld;
     public static void load(){
-        OldWorldCenter = new Planet("old-world-center", Planets.sun, 4f){{
-            meshLoader = () -> new HexMesh(this, 8);
-            cloudMeshLoader = () -> new MultiMesh(
-                    new HexSkyMesh(this, 2, 0.2f, 0.14f, 8, Color.valueOf("eba768").a(0.75f), 2, 0.42f, 1f, 0.43f),
-                    new HexSkyMesh(this, 3, 0.6f, 0.15f, 8, Color.valueOf("eea293").a(0.75f), 2, 0.42f, 1.2f, 0.45f)
+        OldWorldCenter = new Planet("old-world-center", null, 8f){{
+            bloom = true;
+            accessible = false;
+            meshLoader = () -> new SunMesh(
+                    this,8,
+                    8,0.8,2.0,1.8,5,
+                    1.8f,
+                    Color.valueOf("FF6464"),
+                    Color.valueOf("FF9696"),
+                    Color.valueOf("6464FF"),
+                    Color.valueOf("9696FF"),
+                    Color.valueOf("6496FF"),
+                    Color.valueOf("FF9664")
             );
-            alwaysUnlocked = true;
-            unlockedOnLand.add(Blocks.coreBastion);
         }};
         OldWorld = new Planet("old-world",OldWorldCenter,2f){{
-            generator = new ErekirPlanetGenerator();
-            meshLoader = () -> new HexMesh(this, 5);
-            cloudMeshLoader = () -> new MultiMesh(
-                    new HexSkyMesh(this, 2, 0.15f, 0.14f, 5, Color.valueOf("eba768").a(0.75f), 2, 0.42f, 1f, 0.43f),
-                    new HexSkyMesh(this, 3, 0.6f, 0.15f, 5, Color.valueOf("eea293").a(0.75f), 2, 0.42f, 1.2f, 0.45f)
-            );
-            landCloudColor = Color.valueOf("9696FF");
-            atmosphereColor = Color.valueOf("6496FF");
         }};
         NewWorld = new Planet("new-world",OldWorldCenter,2f){{
         }};
