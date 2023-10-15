@@ -21,19 +21,19 @@ public class planet {
     NewWorld;
     public static void load(){
         OldWorldCenter = new Planet("old-world-center", Planets.erekir, 8f){{
-            bloom = true;
-            accessible = false;
             meshLoader = () -> new SunMesh(
                     this,8,
-                    8,0.8,2.0,1.8,5,
+                    8,0.8,1.5,1.8,5,
                     1.8f,
-                    Color.valueOf("FF6464"),
-                    Color.valueOf("FF9696"),
+                    Color.valueOf("6464FF"),
+                    Color.valueOf("9696FF"),
                     Color.valueOf("6464FF"),
                     Color.valueOf("9696FF"),
                     Color.valueOf("6496FF"),
-                    Color.valueOf("FF9664")
+                    Color.valueOf("6496FF")
             );
+            alwaysUnlocked = true;
+            startSector = 20;
         }};
         OldWorld = new Planet("old-world",OldWorldCenter,2f){{
         }};
