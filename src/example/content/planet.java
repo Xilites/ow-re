@@ -20,7 +20,7 @@ public class planet {
     OldWorld,
     NewWorld;
     public static void load(){
-        OldWorldCenter = new Planet("old-world-center", null, 8f){{
+        OldWorldCenter = new Planet("old-world-center", Planets.erekir, 8f){{
             bloom = true;
             accessible = false;
             meshLoader = () -> new SunMesh(
