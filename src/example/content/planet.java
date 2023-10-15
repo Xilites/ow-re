@@ -20,7 +20,7 @@ public class planet {
     OldWorld,
     NewWorld;
     public static void load(){
-        OldWorldCenter = new Planet("old-world-center", null, 8f){{
+        OldWorldCenter = new Planet("old-world-center", Planets.sun, 8f){{
             meshLoader = () -> new SunMesh(
                     this,8,
                     8,0.8,1.5,1.8,5,
